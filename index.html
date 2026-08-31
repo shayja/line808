@@ -48,8 +48,31 @@
       href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@400;500;600&display=swap"
     />
 
-    <!-- Perf: hero background is the LCP element -->
-    <link rel="preload" as="image" href="images/hero-dj-mixer-club.jpg" fetchpriority="high" />
+    <!-- Perf: hero background is the LCP element. A random hero is picked per
+         load; the inline script runs before first paint so only the chosen
+         image is preloaded. Without JS, CSS falls back to the CDJ shot. -->
+    <script>
+      (function () {
+        var heroes = [
+          "images/hero-dj-mixer-club.jpg",
+          "images/hero-crowd-hands-purple.jpg",
+          "images/hero-crowd-orange-lights.jpg",
+          "images/hero-festival-stage-pyro.jpg",
+          "images/hero-mixer-knobs.jpg",
+        ];
+        var pick = heroes[Math.floor(Math.random() * heroes.length)];
+        document.documentElement.style.setProperty(
+          "--hero-img",
+          'url("' + pick + '")',
+        );
+        var link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = pick;
+        link.fetchPriority = "high";
+        document.head.appendChild(link);
+      })();
+    </script>
 
     <link rel="stylesheet" href="styles.css" />
 
