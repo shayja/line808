@@ -1,6 +1,6 @@
 // Contact-link assembly, GA4 click events, YouTube facade, floating WhatsApp
 // button and reveal fade. Without this file the page still renders, but contact
-// CTAs keep their placeholder href="#" — the real WhatsApp/email links only
+// CTAs keep their placeholder href="#" - the real WhatsApp/email links only
 // exist at runtime.
 
 document.documentElement.classList.add("js");
@@ -21,7 +21,7 @@ document.documentElement.classList.add("js");
 
   const user = "dj" + "line808";
   const domain = "gmail" + ".com";
-  const subject = encodeURIComponent("Booking inquiry — DJ Line808");
+  const subject = encodeURIComponent("Booking inquiry - DJ Line808");
   document.querySelectorAll(".email-link").forEach((a) => {
     a.href = "mailto:" + user + "@" + domain + "?subject=" + subject;
   });
@@ -38,7 +38,7 @@ document.documentElement.classList.add("js");
         ld.textContent = JSON.stringify(data);
       }
     } catch {
-      // Malformed JSON-LD — leave it untouched.
+      // Malformed JSON-LD - leave it untouched.
     }
   }
 })();
@@ -74,7 +74,7 @@ document.querySelectorAll(".yt-facade").forEach((box) => {
     const iframe = document.createElement("iframe");
     iframe.src =
       "https://www.youtube.com/embed/" + box.dataset.ytId + "?autoplay=1";
-    iframe.title = "DJ Line808 — Forge TLV Sessions 001 (techno mix)";
+    iframe.title = "DJ Line808 - Forge TLV Sessions 001 (techno mix)";
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
@@ -88,7 +88,7 @@ document.querySelectorAll(".yt-facade").forEach((box) => {
   });
 });
 
-// Floating WhatsApp button — appears after scrolling past the hero.
+// Floating WhatsApp button - appears after scrolling past the hero.
 const hero = document.querySelector(".hero");
 const waFloat = document.querySelector(".wa-float");
 
@@ -129,12 +129,16 @@ if (revealed.length && "IntersectionObserver" in window) {
       bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
       ticking = false;
     };
-    addEventListener("scroll", () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(update);
-      }
-    }, { passive: true });
+    addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+      },
+      { passive: true },
+    );
     update();
   }
 

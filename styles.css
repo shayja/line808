@@ -1,5 +1,5 @@
 /* ===================================================================
-   DJ Line808 — abstract techno design system
+   DJ Line808 - abstract techno design system
    Palette carried over from the original brand:
    dark #050505 · purple #8b5cf6 · pink #ec4899
    =================================================================== */
@@ -327,7 +327,7 @@ a {
     );
 }
 
-/* abstract grid — perspective floor lines, pure CSS */
+/* abstract grid - perspective floor lines, pure CSS */
 .hero-grain {
   position: absolute;
   inset: 0;
@@ -1139,8 +1139,16 @@ a {
   isolation: isolate;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(11, 225, 236, 0.1), transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(236, 72, 153, 0.08), transparent 55%),
+    radial-gradient(
+      ellipse at 20% 0%,
+      rgba(11, 225, 236, 0.1),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(236, 72, 153, 0.08),
+      transparent 55%
+    ),
     var(--surface);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
