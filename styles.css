@@ -16,7 +16,7 @@
   --text-muted: #9ca3af;
   --text-subtle: #6b7280;
   --border: rgba(139, 92, 246, 0.18);
-  --font-display: "Orbitron", "Arial Black", sans-serif;
+  --font-display: "Rajdhani", "Arial Narrow", sans-serif;
   --font-body: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
   --container: 72rem;
 }
@@ -108,7 +108,7 @@ a {
 
 .brand {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: 0.06em;
   color: var(--text);
@@ -316,7 +316,7 @@ a {
 
 .hero-title {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.02;
   margin: 1.4rem 0 1.2rem;
   text-transform: uppercase;
@@ -655,7 +655,7 @@ a {
 
 .stat-num {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1.9rem;
   color: var(--primary);
 }
