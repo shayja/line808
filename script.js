@@ -73,9 +73,7 @@ document.querySelectorAll(".yt-facade").forEach((box) => {
   btn.addEventListener("click", () => {
     const iframe = document.createElement("iframe");
     iframe.src =
-      "https://www.youtube-nocookie.com/embed/" +
-      box.dataset.ytId +
-      "?autoplay=1";
+      "https://www.youtube.com/embed/" + box.dataset.ytId + "?autoplay=1";
     iframe.title = "DJ Line808 — Forge TLV Sessions 001 (techno mix)";
     iframe.allow =
       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
