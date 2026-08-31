@@ -118,3 +118,43 @@ if (revealed.length && "IntersectionObserver" in window) {
 } else {
   revealed.forEach((el) => el.classList.add("in"));
 }
+
+// Scroll progress bar + scroll-spy nav highlighting.
+(function () {
+  const bar = document.querySelector(".scroll-progress");
+  if (bar) {
+    let ticking = false;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
+      ticking = false;
+    };
+    addEventListener("scroll", () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    update();
+  }
+
+  const links = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sections = links
+    .map((a) => document.querySelector(a.hash))
+    .filter(Boolean);
+  if (sections.length && "IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            links.forEach((a) =>
+              a.classList.toggle("active", a.hash === "#" + e.target.id),
+            );
+          }
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px" },
+    );
+    sections.forEach((s) => spy.observe(s));
+  }
+})();
