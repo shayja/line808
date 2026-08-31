@@ -54,6 +54,9 @@ document.documentElement.classList.add("js");
   document.querySelectorAll(".email-link").forEach((a) => {
     a.addEventListener("click", () => send("email_click"));
   });
+  document.querySelectorAll(".nav-cta").forEach((a) => {
+    a.addEventListener("click", () => send("book_now_click"));
+  });
   document.querySelectorAll(".listen-link").forEach((a) => {
     a.addEventListener("click", () =>
       send("click_listen", {
