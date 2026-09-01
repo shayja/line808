@@ -61,19 +61,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      />
+    </noscript>
 
-    <!-- Perf: hero background is the LCP element -->
+    <!-- Perf: hero background is the LCP element; smaller variant on phones -->
     <link
       rel="preload"
       as="image"
       href="images/hero-dj-mixer-club.webp"
       fetchpriority="high"
+      media="(min-width: 40.01rem)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero-dj-mixer-club-800.webp"
+      fetchpriority="high"
+      media="(max-width: 40rem)"
     />
 
-    <link rel="stylesheet" href="styles.min.css?v=11" />
+    <link rel="stylesheet" href="styles.min.css?v=12" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -592,8 +613,8 @@
                 <img
                   src="images/dj-controller-club-night.webp"
                   alt="DJ mixing on a Pioneer controller during a club night"
-                  width="1200"
-                  height="800"
+                  width="800"
+                  height="534"
                   loading="lazy"
                   decoding="async"
                 />
@@ -609,10 +630,10 @@
             <article class="service-card reveal">
               <figure>
                 <img
-                  src="images/rave-crowd-festival.webp"
+                  src="images/rave-crowd-festival-800.webp"
                   alt="Crowd dancing under purple lights and pyrotechnics at a rave festival"
-                  width="1600"
-                  height="1067"
+                  width="800"
+                  height="534"
                   loading="lazy"
                   decoding="async"
                 />
@@ -628,10 +649,10 @@
             <article class="service-card reveal">
               <figure>
                 <img
-                  src="images/hero-dj-mixer-club.webp"
+                  src="images/hero-dj-mixer-club-800.webp"
                   alt="CDJ decks and mixer glowing in a dark club booth"
-                  width="1920"
-                  height="1280"
+                  width="800"
+                  height="534"
                   loading="lazy"
                   decoding="async"
                 />
@@ -801,6 +822,6 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp" /></svg>
     </a>
 
-    <script src="script.min.js?v=11" defer></script>
+    <script src="script.min.js?v=12" defer></script>
   </body>
 </html>
