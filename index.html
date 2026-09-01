@@ -94,7 +94,7 @@
       media="(max-width: 40rem)"
     />
 
-    <link rel="stylesheet" href="styles.min.css?v=13" />
+    <link rel="stylesheet" href="styles.min.css?v=14" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -168,6 +168,50 @@
             "genre": "Deep Techno",
             "url": "https://www.mixcloud.com/line808/dj-line808-memory-circuit-dj-mix/",
             "byArtist": { "@type": "MusicGroup", "name": "DJ Line808" }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured data: FAQ. Keep in sync with the visible #faq section.
+         Must stay AFTER the MusicGroup script - script.js injects contact
+         details into the first ld+json block on the page. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What kind of techno does DJ Line808 play?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raw, deep and hypnotic techno around 130 BPM - dark atmospheres, rolling drums and long live blends. Peak-time slots push into harder, faster territory."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is DJ Line808 based?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Tel Aviv, Israel - available for club nights, festivals, raves, private events and livestreams across Israel, and for international slots."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I book DJ Line808 for an event?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Send a date and a venue on WhatsApp or email and get an answer the same day, including availability and a quote. Rates depend on event type, set length, location and date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I listen to DJ Line808's mixes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Forge TLV Sessions stream free on SoundCloud, Mixcloud and YouTube. Every session is also embedded on the mixes page at line808.com/mixes."
+            }
           }
         ]
       }
@@ -575,7 +619,10 @@
             <p class="reveal">
               Every set is mixed live: long blends, evolving tension, and a
               narrative arc that takes a room from warm-up depth to peak-time
-              pressure and back.
+              pressure and back. New to the style? Read
+              <a href="/raw-deep-hypnotic-techno/"
+                >what raw deep hypnotic techno actually is</a
+              >.
             </p>
             <ul class="stat-row reveal" role="list">
               <li>
@@ -604,7 +651,9 @@
           </h2>
           <p class="section-lead reveal">
             Available across Tel Aviv and all of Israel - and for international
-            slots.
+            slots. See the
+            <a href="/book-techno-dj-tel-aviv/">full booking details</a> for how
+            it works and what's included.
           </p>
 
           <div class="service-grid">
@@ -665,6 +714,59 @@
                 </p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================= FAQ ======================= -->
+      <!-- Visible copy mirrors the FAQPage JSON-LD in <head> - keep in sync. -->
+      <section
+        id="faq"
+        class="section section-alt"
+        aria-labelledby="faq-title"
+      >
+        <div class="container">
+          <p class="section-kicker reveal">Questions</p>
+          <h2 id="faq-title" class="section-title reveal">FAQ</h2>
+          <div class="faq-list reveal">
+            <details class="faq-item">
+              <summary>What kind of techno does DJ Line808 play?</summary>
+              <p>
+                Raw, deep and hypnotic techno around 130 BPM - dark
+                atmospheres, rolling drums and long live blends. Peak-time
+                slots push into harder, faster territory. Here's a full guide
+                to
+                <a href="/raw-deep-hypnotic-techno/"
+                  >the raw deep hypnotic techno sound</a
+                >.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Where is DJ Line808 based?</summary>
+              <p>
+                In Tel Aviv, Israel - available for club nights, festivals,
+                raves, private events and livestreams across Israel, and for
+                international slots.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I book DJ Line808 for an event?</summary>
+              <p>
+                Send a date and a venue on WhatsApp or email and get an answer
+                the same day, including availability and a quote. Rates depend
+                on event type, set length, location and date - all the details
+                are on the
+                <a href="/book-techno-dj-tel-aviv/">booking page</a>.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Where can I listen to DJ Line808's mixes?</summary>
+              <p>
+                The Forge TLV Sessions stream free on SoundCloud, Mixcloud and
+                YouTube. Every session is also embedded on the
+                <a href="/mixes/">mixes page</a>.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -802,7 +904,8 @@
           <li><a href="#mixes">Mixes</a></li>
           <li><a href="#sound">Sound</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#booking">Booking</a></li>
+          <li><a href="/raw-deep-hypnotic-techno/">RDH Techno</a></li>
+          <li><a href="/book-techno-dj-tel-aviv/">Booking</a></li>
           <li>
             <a class="back-top" href="#top" aria-label="Back to top">&uarr;</a>
           </li>
