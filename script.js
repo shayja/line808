@@ -127,11 +127,18 @@ if (revealed.length && "IntersectionObserver" in window) {
   const bar = document.querySelector(".scroll-progress");
   if (bar) {
     let ticking = false;
+    let max = 0;
+    const measure = () => {
+      max = document.documentElement.scrollHeight - innerHeight;
+      update();
+    };
     const update = () => {
-      const max = document.documentElement.scrollHeight - innerHeight;
       bar.style.transform = "scaleX(" + (max > 0 ? scrollY / max : 0) + ")";
       ticking = false;
     };
+    measure();
+    addEventListener("resize", measure, { passive: true });
+    addEventListener("load", measure);
     addEventListener(
       "scroll",
       () => {

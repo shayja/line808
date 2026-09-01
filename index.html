@@ -94,7 +94,7 @@
       media="(max-width: 40rem)"
     />
 
-    <link rel="stylesheet" href="styles.min.css?v=12" />
+    <link rel="stylesheet" href="styles.min.css?v=13" />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -553,6 +553,11 @@
           <figure class="split-media reveal">
             <img
               src="images/dj-decks-mixer.webp"
+              srcset="
+                images/dj-decks-mixer-560.webp 560w,
+                images/dj-decks-mixer.webp     800w
+              "
+              sizes="(max-width: 52rem) calc(100vw - 2.5rem), 505px"
               alt="Close-up of a Pioneer DJ mixer and jog wheel in a dark club booth"
               width="800"
               height="532"
@@ -822,6 +827,6 @@
       <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp" /></svg>
     </a>
 
-    <script src="script.min.js?v=12" defer></script>
+    <script src="script.min.js?v=13" defer></script>
   </body>
 </html>
